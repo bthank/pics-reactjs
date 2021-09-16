@@ -11,7 +11,9 @@ class SearchBar extends React.Component {
         // this line will keep the browser from trying to submit the form automatically on enter and in the process refresh the page
         // always add this to every project form I create; we never want a form to submit automatically on enter
         event.preventDefault();
-        console.log(this.state.term);
+        console.log('In SearchBar.js onFormSubmit method, term:', this.state.term);
+
+        this.props.onSubmit(this.state.term);
     }
 
     render() {
